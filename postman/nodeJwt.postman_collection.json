@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4a90da77-62ae-40e5-b71c-839cef626898",
+		"name": "trusteer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "03739c76-3586-483f-be41-9f20dc46f57b",
+			"name": "get all users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJpYXQiOjE1NjM2MzY0MzMsImV4cCI6MTU2MzgwOTIzMywiaXNzIjoiVGhlQmlnUiJ9.ZwQOSH6Y5Gh3TfGV8UipNlWGis0LnJBkHuKC6u9GPbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "user",
+						"value": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicm95IiwiaWF0IjoxNTYzNjM2MDU1LCJleHAiOjE1NjM4MDg4NTUsImlzcyI6IlRoZUJpZ1IifQ.d3CaDYuqkYePx3qpbHLjAcpdA6-SrjTTgR2zCQK9teQ",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "pass",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "bc33ae08-3b21-4e76-a312-e3e31affedb7",
+			"name": "login into system to get token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "admin",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "00bb78ff-67c8-4d23-9779-4019bcf1d185",
+			"name": "add new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "admin",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
