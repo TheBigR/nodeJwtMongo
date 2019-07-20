@@ -1,12 +1,188 @@
 {
 	"info": {
 		"_postman_id": "4a90da77-62ae-40e5-b71c-839cef626898",
-		"name": "trusteer",
+		"name": "nodeJwt",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"_postman_id": "03739c76-3586-483f-be41-9f20dc46f57b",
+			"_postman_id": "072cb693-b903-4191-a1ec-174c919c8cb7",
+			"name": "add new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "admin",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "c3f22b92-98bd-4e35-9c03-7fdb36a1d004",
+			"name": "add new user2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "roy",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass1",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "9ebe0273-b37e-47ea-9724-49cfffe1ab36",
+			"name": "add new user3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "royke3",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "fd1bb10b-b5e0-4f15-ad0f-27c6493e69fd",
+			"name": "add new user4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "uzia",
+							"sessionValue": "roy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"sessionValue": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "c846824c-5800-4ed6-9d19-e815a25fec81",
 			"name": "get all users",
 			"request": {
 				"auth": {
@@ -55,7 +231,7 @@
 			"response": []
 		},
 		{
-			"_postman_id": "bc33ae08-3b21-4e76-a312-e3e31affedb7",
+			"_postman_id": "d8c38f11-a082-4d2c-90ef-3c04394edefb",
 			"name": "login into system to get token",
 			"request": {
 				"method": "POST",
@@ -93,50 +269,6 @@
 						"api",
 						"v1",
 						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"_postman_id": "00bb78ff-67c8-4d23-9779-4019bcf1d185",
-			"name": "add new user",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "admin",
-							"sessionValue": "roy",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "admin",
-							"sessionValue": "pass",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/v1/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"v1",
-						"users"
 					]
 				}
 			},
