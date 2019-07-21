@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
 const User = require('../models/users');
@@ -106,6 +107,16 @@ module.exports = {
                 res.status(status).send(result);
             }
         });
+    },
+    init: (req, res) => {
+        res.sendFile(path.join(__dirname + '/../pages/index.html'));
+    },
+    register: (req, res) => {
+        res.sendFile(path.join(__dirname + '/../pages/register.html'));
+    },
+    signin: (req, res) => {
+        res.sendFile(path.join(__dirname + '/../pages/signin.html'));
+
     }
 };
 

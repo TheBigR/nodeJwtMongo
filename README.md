@@ -8,7 +8,14 @@ that hashes passwords and creates a json web token.
 also in the repo - the collection of postman requests to demonstrate the api's functionality.
 
 
-#
+# How to use
+
+
+#Development
+* clone git repo.
+* run npm install.
+* npm run dev.
+
 
 # whats next?
 
