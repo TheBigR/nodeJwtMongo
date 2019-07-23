@@ -7,9 +7,11 @@
 <body>
 <h1>Registration page</h1>
 <br><br>
-name: <input > <br>
-password: <input> <br>
-<button>Submit</button>
+<form action="/users" method="post">
+    First name: <input type="text" name="name"><br>
+    Last name: <input type="password" name="password"><br>
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
