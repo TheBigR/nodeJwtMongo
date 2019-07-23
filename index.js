@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
 
+process.env.NODE_ENV = 'development';
+
 const environment = process.env.NODE_ENV;
 const stage = require('./config')[environment];
 const routes = require('./routes/index.js');
@@ -19,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use('/api/v1', routes(router));
+app.use('/', routes(router));
 
 if (environment !== 'production') {
     app.use(logger('dev'));

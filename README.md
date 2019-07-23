@@ -11,10 +11,12 @@ also in the repo - the collection of postman requests to demonstrate the api's f
 # How to use
 
 
+
 #Development
 * clone git repo.
 * run npm install.
-* npm run dev.
+* SET NODE_ENV=development
+* nodemon index
 
 
 # whats next?
