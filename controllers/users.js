@@ -37,7 +37,6 @@ module.exports = {
 
     login: (req, res) => {
         const {name, password } = req.body;
-        res.header('Access-Control-Allow-Origin', ['*']);
         mongoose.connect(connUri, {useNewUrlParser: true}, (err) => {
             let result = {};
             let status = 200;
@@ -77,7 +76,6 @@ module.exports = {
     },
 
     getAll: (req, res) => {
-        res.header('Access-Control-Allow-Origin', ['*']);
         mongoose.connect(connUri, {useNewUrlParser: true}, (err) => {
             let result = {};
             let status = 200;
@@ -111,15 +109,15 @@ module.exports = {
         });
     },
     init: (req, res) => {
-        res.header('Access-Control-Allow-Origin', ['*']);
         res.sendFile(path.join(__dirname + '/../pages/index.html'));
     },
     register: (req, res) => {
-        res.header('Access-Control-Allow-Origin', ['*']);
         res.sendFile(path.join(__dirname + '/../pages/register.html'));
     },
     signin: (req, res) => {
         res.header('Access-Control-Allow-Origin', ['*']);
+        res.header('Access-Control-Allow-Headers',['application/json']);
+        res.header('Access-Control-Allow-Methods',['GET','POST']);
         res.sendFile(path.join(__dirname + '/../pages/signin.html'));
 
     }
