@@ -11,7 +11,6 @@ module.exports = {
         mongoose.connect(connUri, {useNewUrlParser: true}, (err) => {
             let result = {};
             let status = 201;
-            res.header('Access-Control-Allow-Origin', ['*']);
             if (!err) {
                 const { name, password } = req.body;
                 const user = new User({ name, password});
