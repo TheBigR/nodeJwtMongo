@@ -67,7 +67,7 @@ module.exports = {
                     } else {
                         status = 404;
                         result.status = status;
-                        result.error = err;
+                        result.error = 'User not found';
                         res.status(status).send(result);
                     }
                 });
